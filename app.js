@@ -6,9 +6,10 @@ app.use(express.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
   res.send(`
+    <h1>Login Test Site</h1>
     <form method="POST" action="/login">
-      <input name="username" placeholder="username"/><br/>
-      <input name="password" type="password" placeholder="password"/><br/>
+      <input name="username" placeholder="Username"/><br/>
+      <input name="password" type="password" placeholder="Password"/><br/>
       <button type="submit">Login</button>
     </form>
   `);
@@ -17,7 +18,7 @@ app.get('/', (req, res) => {
 app.post('/login', (req, res) => {
   const { username, password } = req.body;
   if (username === 'admin' && password === '1234') {
-    res.send('Welcome back admin !');
+    res.send('Welcome back admin!');
   } else {
     res.send('Login failed.');
   }
