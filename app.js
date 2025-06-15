@@ -34,3 +34,28 @@ app.get('/secret', (req, res) => {
     res.send('Accès refusé.');
   }
 });
+
+
+app.get('/admin', (req, res) => {
+  res.send('Panneau d’administration');
+});
+
+app.get('/login', (req, res) => {
+  res.send('Page de connexion');
+});
+
+app.get('/dashboard', (req, res) => {
+  res.send('Dashboard utilisateur');
+});
+
+app.get('/test', (req, res) => {
+  res.send('Environnement de test');
+});
+
+app.get('/backup', (req, res) => {
+  res.send('Fichier backup présent');
+});
+
+app.get('/old', (req, res) => {
+  res.send('Ancienne version du site');
+});
