@@ -25,3 +25,12 @@ app.post('/login', (req, res) => {
 });
 
 app.listen(port, () => console.log(`App running on port ${port}`));
+
+app.get('/secret', (req, res) => {
+  const pwd = req.query.pwd;
+  if (pwd === 'letmein') {
+    res.send('🎉 FÉLICITATIONS, tu as trouvé le secret !');
+  } else {
+    res.send('Accès refusé.');
+  }
+});
